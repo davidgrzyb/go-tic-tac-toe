@@ -47,7 +47,7 @@ func setInitialGameData(g *game) {
 	}
 
 	// Set first turn
-	g.userTurn = "X" == chosenSymbol
+	g.userTurn = "X" == g.userSymbol
 }
 
 func play(g *game) {
@@ -201,7 +201,7 @@ func hasWinner(b [9]string) bool {
 		{0, 3, 6},
 		{1, 4, 7},
 		{2, 5, 8},
-		{1, 4, 8},
+		{0, 4, 8},
 		{2, 4, 6},
 	}
 
